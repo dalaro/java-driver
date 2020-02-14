@@ -241,6 +241,12 @@ public class DefaultProtocolVersionRegistry implements ProtocolVersionRegistry {
     } else if (DseProtocolFeature.CONTINUOUS_PAGING.equals(feature)) {
       // All DSE versions
       return DseProtocolVersion.DSE_V1.getCode() <= code;
+    } else if (DefaultProtocolFeature.MULTIPLE_IN_PREDICATES.equals(feature)) {
+      // All DSE versions and all OSS V4+
+      return DefaultProtocolVersion.V4.getCode() <= code;
+    } else if (DefaultProtocolFeature.SMALLINT_TINYINT_AND_DATE_TYPES.equals(feature)) {
+      // All DSE versions and all OSS V4+
+      return DefaultProtocolVersion.V4.getCode() <= code;
     } else {
       throw new IllegalArgumentException("Unhandled protocol feature: " + feature);
     }

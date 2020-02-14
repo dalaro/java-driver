@@ -35,5 +35,15 @@ public enum DefaultProtocolFeature implements ProtocolFeature {
    * @see <a href="https://issues.apache.org/jira/browse/CASSANDRA-10145">CASSANDRA-10145</a>
    */
   PER_REQUEST_KEYSPACE,
+
+  /** The ability to use smallint, tinyint, and date types. */
+  SMALLINT_TINYINT_AND_DATE_TYPES,
+
+  /**
+   * The ability to send statements with more than one IN-predicate.
+   *
+   * @see <a href="https://issues.apache.org/jira/browse/CASSANDRA-7981">CASSANDRA-7981</a>
+   */
+  MULTIPLE_IN_PREDICATES,
   ;
 }
