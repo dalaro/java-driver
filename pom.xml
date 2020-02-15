@@ -20,7 +20,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.datastax.oss</groupId>
   <artifactId>java-driver-parent</artifactId>
-  <version>4.4.0-DSP-19506</version>
+  <version>4.4.0-DSP-19506-3</version>
   <packaging>pom</packaging>
   <name>DataStax Java driver for Apache Cassandra(R)</name>
   <description>A driver for Apache Cassandra(R) 2.1+ that works exclusively with the Cassandra Query Language version 3 (CQL3) and Cassandra's native protocol versions 3 and above.</description>
@@ -873,9 +873,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </profile>
   </profiles>
   <distributionManagement>
+    <!--
     <repository>
       <id>ossrh</id>
       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+    -->
+    <repository>
+      <id>sjc-datastax-releases-local</id>
+      <url>https://repo.sjc.dsinternal.org/artifactory/list/datastax-releases-local/</url>
     </repository>
   </distributionManagement>
   <licenses>
