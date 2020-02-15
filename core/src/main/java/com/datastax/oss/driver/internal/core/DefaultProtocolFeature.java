@@ -36,11 +36,30 @@ public enum DefaultProtocolFeature implements ProtocolFeature {
    */
   PER_REQUEST_KEYSPACE,
 
-  /** The ability to use smallint, tinyint, and date types. */
-  SMALLINT_TINYINT_AND_DATE_TYPES,
+  /**
+   * The ability to apply a limit on a per-partition rather than per-query basis.
+   *
+   * @see <a href="https://issues.apache.org/jira/browse/CASSANDRA-7017">CASSANDRA-7017</a>
+   */
+  PER_PARTITION_LIMIT,
 
   /**
-   * The ability to send statements with more than one IN-predicate.
+   * Support for smallint, tinyint, and date types.
+   *
+   * @see <a href="https://jira.apache.org/jira/browse/CASSANDRA-8951">CASSANDRA-8951</a>
+   * @see <a href="https://jira.apache.org/jira/browse/CASSANDRA-7523">CASSANDRA-7523</a>
+   */
+  DATE_SMALLINT_TINYINT_TYPES,
+
+  /**
+   * Support for materialized views.
+   *
+   * @see <a href="https://issues.apache.org/jira/browse/CASSANDRA-6477">CASSANDRA-6477</a>
+   */
+  MATERIALIZED_VIEWS,
+
+  /**
+   * The ability to execute queries with more than one IN-predicate.
    *
    * @see <a href="https://issues.apache.org/jira/browse/CASSANDRA-7981">CASSANDRA-7981</a>
    */
