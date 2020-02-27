@@ -37,13 +37,6 @@ public enum DefaultProtocolFeature implements ProtocolFeature {
   PER_REQUEST_KEYSPACE,
 
   /**
-   * The ability to apply a limit on a per-partition rather than per-query basis.
-   *
-   * @see <a href="https://issues.apache.org/jira/browse/CASSANDRA-7017">CASSANDRA-7017</a>
-   */
-  PER_PARTITION_LIMIT,
-
-  /**
    * Support for smallint and tinyint types.
    *
    * @see <a href="https://jira.apache.org/jira/browse/CASSANDRA-8951">CASSANDRA-8951</a>
@@ -56,4 +49,5 @@ public enum DefaultProtocolFeature implements ProtocolFeature {
    * @see <a href="https://jira.apache.org/jira/browse/CASSANDRA-7523">CASSANDRA-7523</a>
    */
   DATE_TYPE,
+  ;
 }
